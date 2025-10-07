@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
+import Navbar from "../components/Navbar";
 
 const images = [
     "/images/bg1.png",
@@ -35,7 +35,7 @@ export default function HomePage4() {
                 ))}
                 {/* Top-to-middle gradient shadow overlay */}
                 <div
-                    className="absolute inset-0 pointer-events-none"
+                    className="absolute inset-0 pointer-events-none h-[217px]"
                     style={{
                         background:
                             "linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.00) 100%)",
@@ -45,8 +45,8 @@ export default function HomePage4() {
 
             {/* Overlay for content (no global dark tint) */}
             <div className="relative z-10 flex flex-col w-full h-full">
-                <Navbar variant="white" />
-                <div className="fixed bottom-0 left-0 w-full flex justify-center p-4">
+                <Navbar logoColor="white" background="transparent" iconVariant="white" />
+                <div className="fixed z-10 bottom-0 left-0 w-full flex justify-center p-4">
                     <SearchBar fullscreen={fullscreen} setFullscreen={setFullscreen} width={774} fullHeight={674} height={162} />
                 </div>
                 <div className="absolute bottom-0 right-0 w-[172px] h-[172px]">
