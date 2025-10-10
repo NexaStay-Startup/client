@@ -12,6 +12,13 @@ module.exports = {
       backgroundImage: {
         "nexastay-gradient":
           "radial-gradient(94.74% 94.74% at 50% 7.34%, #2DD4BF 0%, #0EA5E9 55%, #D946EF 100%)",
+        "nexastay-border":
+          "radial-gradient(141.56% 141.56% at 50% -7.74%, #2DD4BF 0%, #0EA5E9 50.96%, #D946EF 100%)",
+      },
+      boxShadow: {
+        "nexastay-default": "0px 4px 46px -1px rgba(0, 0, 0, 0.15)",
+        "nexastay-hover": "0 5px 34px 0 rgba(0, 255, 195, 0.36)",
+        "card-hover": "0 5px 34px 0 rgba(0, 255, 195, 0.36)",
       },
       textColor: {
         "nexastay-gradient":
@@ -67,6 +74,27 @@ module.exports = {
           "-webkit-background-clip": "text",
           "background-clip": "text",
           color: "transparent",
+        },
+        ".card-gradient-border": {
+          position: "relative",
+          "border-radius": "22px",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            inset: "-2px",
+            padding: "2px",
+            background: "radial-gradient(141.56% 141.56% at 50% -7.74%, #2DD4BF 0%, #0EA5E9 50.96%, #D946EF 100%)",
+            "border-radius": "inherit",
+            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            "-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            "mask-composite": "exclude",
+            "-webkit-mask-composite": "xor",
+            opacity: "0",
+            transition: "opacity 0.2s ease-in-out",
+          },
+          "&:hover::before": {
+            opacity: "30",
+          },
         },
       });
     },

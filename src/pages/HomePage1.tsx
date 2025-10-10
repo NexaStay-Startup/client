@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AnimatedGradientBackground from '../components/AnimatedGradientBackground'
-import Navbar from '../components/Navbar'
 import SearchBar from '../components/SearchBar'
+import Navbar from '../components/Navbar';
 
 export default function HomePage1() {
   const [fullscreen, setFullscreen] = useState(false);
@@ -14,7 +14,7 @@ export default function HomePage1() {
       {/* Foreground content */}
       <div className="z-10 flex flex-col h-full fixed">
         {/* Navbar */}
-        <Navbar background="white" variant="transparent" logo="/images/nexa-logo.png" />
+        <Navbar logoColor="normal" background="white" iconVariant="transparent" />
 
         {/* Main content */}
         <div className="flex flex-1">
