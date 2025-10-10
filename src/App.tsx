@@ -13,23 +13,33 @@ import AnimatedBg from './components/AnimatedBg';
 export default function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/" element={<HomePage1 />} />
-          <Route path="/homepage2" element={<HomePage2 />} />
-          <Route path="/homepage3" element={<Homepage3 />} />
-          <Route path="/homepage4" element={<HomePage4 />} />
-          <Route path="/homepage5" element={<HomePage5 input={{ type: 'background', 
-                        videos: [
-                          { url: '/videos/stars.mp4' }, 
-                          { url: '/videos/ruisseau.mp4' }, 
-                          { url: '/videos/nejar.mp4' },
-                          { url: '/videos/husky.mp4' }
-                        ] 
-                          }} />} />
-          <Route path="/test" element={<TestPage />} />
-          <Route path="/voiceai" element={<VoiceAiVisualizer />} />
-          <Route path="/bg" element={<AnimatedBg />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage1 />} />
+        <Route path="/homepage2" element={<HomePage2 />} />
+        <Route path="/homepage3" element={<Homepage3 />} />
+        <Route path="/homepage4" element={<HomePage4 />} />
+        <Route path="/homepage5" element={<HomePage5 input={{
+          type: 'background',
+          videos: [
+            { url: '/videos/stars.mp4' },
+            { url: '/videos/ruisseau.mp4' },
+            { url: '/videos/nejar.mp4' },
+            { url: '/videos/husky.mp4' }
+          ]
+        }} />} />
+        <Route path="/bg-video" element={<HomePage5 input={{
+          type: 'video',
+          videos: [
+            { url: '/videos/stars.mp4' },
+            { url: '/videos/ruisseau.mp4' },
+            { url: '/videos/nejar.mp4' },
+            { url: '/videos/husky.mp4' }
+          ]
+        }} />} />
+        <Route path="/test" element={<TestPage />} />
+        <Route path="/voiceai" element={<VoiceAiVisualizer />} />
+        <Route path="/bg" element={<AnimatedBg />} />
+      </Routes>
     </Router>
   );
 }
