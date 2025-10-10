@@ -47,7 +47,7 @@ export default function HomePage4() {
             <div className="relative z-10 flex flex-col w-full h-full">
                 <Navbar logoColor="white" background="transparent" iconVariant="white" />
                 <div className="fixed z-10 bottom-0 left-0 w-full flex justify-center p-4">
-                    <SearchBar fullscreen={fullscreen} setFullscreen={setFullscreen} width={774} fullHeight={674} height={162} />
+                    <SearchBar fullscreen={fullscreen} setFullscreen={setFullscreen} width={774} fullHeight={500} height={162} />
                 </div>
                 <div className="absolute bottom-0 right-0 w-[172px] h-[172px]">
                     <img
